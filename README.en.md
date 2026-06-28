@@ -1,36 +1,15 @@
-# 东方仙盟扫描件转Excel表格
-
-#### Description
-批量识别扫描文档内表格结构，一键生成可编辑 Excel，支持技能直接调用。
-
-#### Software Architecture
-Software architecture description
-
-#### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Instructions
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+famsScanPic2Excel
+Overview
+famsScanPic2Excel is an independent skill developed by Oriental Xianmeng. It supports batch table recognition for scanned images and scanned PDFs, intelligently restores complete table structures, and outputs standard editable Excel files via one-click skill invocation.
+Core Features
+- Stably process large-volume scanned documents and support multi-page batch parsing
+- Intelligently identify tilted, blurred and low-quality scanned tables
+- Automatically restore cell content and cross-page continuous table structure
+- Output standardized Excel files without manual sorting and correction
+- Standard skill interface, seamlessly adapted to open eye design ecosystem
+Application Scenarios
+Suitable for electronic entry of archival ledgers, financial statements, paper forms, scanned archives and various batch scanned table documents.
+Usage
+Call the skill directly, upload scanned images or scanned PDF files. The system will automatically complete recognition, structural analysis and Excel export in one process.
+Advantages
+Self-developed exclusive skill with independent and controllable capabilities. Optimized for mass scanned table processing scenarios, providing more stable batch processing performance and higher adaptation for scanned files than general tools.
