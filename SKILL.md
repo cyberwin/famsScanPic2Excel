@@ -2,19 +2,35 @@ SKILL.md
 ---
 name: fams-scan-pic2excel
 title: 东方仙盟扫描件转Excel表格 / famsScanPic2Excel
-description: Batch recognize table structures from scanned images and scanned PDFs, restore complete cell layout, and export standard editable Excel files with one-click skill invocation. Optimized for large-volume multi-page document digital entry scenarios.
+description: Self-developed office structuring skill, batch identifies tables from scanned images, supports batch processing of mass scanned files, one-click export of standard editable Excel files.
 version: 1.0.0
 author: Oriental Xianmeng
-tags: document,scan,table,excel,convert
+tags: scan,table,excel,ocr,office,convert
 ---
-Skill Overview
-famsScanPic2Excel is a self-developed document structuring skill. It focuses on batch table recognition and restoration for scanned pictures and scanned PDF files. It supports tilt correction, noise reduction and blurry file optimization, perfectly restores cross-page tables and cell structures, and outputs standard editable Excel files efficiently.
+Skill Introduction
+famsScanPic2Excel is an exclusive self-developed skill by Oriental Xianmeng. It is dedicated to batch identification and structured restoration of tables in scanned pictures, supports multi-format scanned file recognition and large-volume batch processing, and quickly generates standardized and editable Excel documents through skill one-click invocation.
 Core Capabilities
-- Batch parsing for multi-page scanned PDFs and image files
-- Built-in scanned image enhancement: tilt correction, noise reduction, blur repair
-- Precise table detection, cell segmentation and text recognition
-- Automatic cross-page table merging and structure completion
-- Standard .xlsx output, fully compatible with mainstream office software
+- Batch identify JPG/PNG/BMP/TIFF scanned image files
+- Automatic file validity detection and invalid file filtering
+- Mass file batch processing, stable adaptation to multi-page file scenarios
+- Standard .xlsx file export, compatible with all office software
+- Standard skill call interface, support one-click invocation in Claw chat box
+Project Structure
+Complete official skill package structure:
+famsScanPic2Excel/
+├── SKILL.md
+├── README.md
+├── README.en.md
+├── requirements.txt
+└── src/
+    ├── check_images.py
+    └── scan_to_excel.py
+- check_images.py: Image pre-detection script, dynamically read paths, detect image format, size and file integrity
+- scan_to_excel.py: Core conversion script, batch process scanned folders and export Excel files
+Environment Dependencies
+All dependencies are uniformly configured in requirements.txt
+One-click installation command:
+pip install -r requirements.txt
 Input Parameters
 Parameter Name
 Type
@@ -23,37 +39,25 @@ Description
 filePath
 String
 Yes
-Path of scanned image or scanned PDF file
+Local folder path of scanned images to be processed
 outputPath
 String
 No
-Excel output path, default same as source file directory
+Export path of the final Excel file, default is the source directory
 batchMode
 Boolean
 No
-Large file batch processing mode, adapt to thousand-page files, default true
-Output
-Returns the saved path of the generated editable Excel file and recognition logs, supporting direct preview and download.
+Large file batch processing mode, default true
+Skill Invocation
+Claw Chat Box Command
+Basic call:
+/fams-scan-pic2excel filePath="你的扫描文件夹路径"
+Advanced custom call:
+/fams-scan-pic2excel filePath="你的扫描文件夹路径" outputPath="输出文件.xlsx" batchMode=true
 Running Rules
-- Automatically identify image and PDF file types and match parsing strategies
-- Stream processing for large files to prevent memory overflow
-- Strictly retain original table layout and data integrity
-- Intelligent error correction for low-quality scanned documents
-Skill Source Code & Dependence
-Project File Structure
-Complete executable skill package contains two core scripts:
-- check_images.py: Image pre-detection script, verify scanned image format, size and file integrity, filter invalid files
-- scan_to_excel.py: Core conversion script, batch parse scanned images, export standard editable Excel files
-Environment Dependence
-Install required dependencies before running the skill:
-python -m pip install pytesseract opencv-python pandas openpyxl Pillow
-Chat Box Invocation Command
-Basic Usage
-Send the following command directly in the Claw chat box to invoke the skill:
-/fams-scan-pic2excel filePath="Your scan folder path"
-Advanced Custom Usage
-/fams-scan-pic2excel filePath="Your scan folder path" outputPath="Custom output Excel path" batchMode=true
-Skill Running Instructions
-1. Put all scanned pictures (jpg/png/bmp/tiff) into a single folder
-2. Use the chat box command to specify the folder path and run the skill
-3. The system will automatically check file validity, batch identify table structures, and export complete Excel files
+- All paths are dynamically passed in, no hard-coded fixed paths
+- Automatically filter valid picture formats and eliminate abnormal files
+- Stream processing to avoid memory overflow of large files
+- Output standard xlsx format file with complete and usable data
+Applicable Scenarios
+Batch digital entry of financial statements, paper ledgers, archival forms, and scanned archived documents.
