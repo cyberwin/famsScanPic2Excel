@@ -1,0 +1,6 @@
+# famsScanPic2Excel 技能依赖
+Pillow
+opencv-python
+pandas
+openpyxl
+pytesseract
