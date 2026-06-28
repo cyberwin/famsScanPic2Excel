@@ -1,37 +1,18 @@
-# 东方仙盟扫描件转Excel表格
-
-#### 介绍
-批量识别扫描文档内表格结构，一键生成可编辑 Excel，支持技能直接调用。
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+famsScanPic2Excel 技能说明
+📌 技能名称
+英文：famsScanPic2Excel
+中文：东方仙盟扫描件转 Excel 表格
+📖 技能简介
+东方仙盟自研结构化文档转换技能，支持扫描图片、扫描 PDF 批量表格识别，自动还原表格结构、单元格内容，一键输出标准可编辑 Excel 文件，支持智能体技能直接调用，适配开眼设计生态。
+✨ 核心能力
+- 支持大批量扫描文档批量解析，适配千页级文件稳定处理
+- 智能识别扫描表格、模糊复印件、倾斜扫描文件结构
+- 自动还原单元格、跨页连续表格，保留原始排版逻辑
+- 一键导出规范化 Excel，无需手动整理修正
+- 标准化技能调用入口，可无缝嵌入开眼设计平台使用
+🎯 适用场景
+档案台账、财务报表、纸质表单、存档扫描PDF、批量纸质表格数字化录入。
+⚙️ 使用方式
+通过智能体技能指令直接调用，上传扫描图片或扫描PDF文件，自动完成识别、解析、结构化导出Excel全流程。
+💡 技能优势
+专属自研技能，独立可控、批量处理性能更强、扫描件适配度更高，区别于通用工具，专为大批量档案表格数字化场景优化。
