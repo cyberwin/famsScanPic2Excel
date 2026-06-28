@@ -39,3 +39,21 @@ Running Rules
 - Stream processing for large files to prevent memory overflow
 - Strictly retain original table layout and data integrity
 - Intelligent error correction for low-quality scanned documents
+Skill Source Code & Dependence
+Project File Structure
+Complete executable skill package contains two core scripts:
+- check_images.py: Image pre-detection script, verify scanned image format, size and file integrity, filter invalid files
+- scan_to_excel.py: Core conversion script, batch parse scanned images, export standard editable Excel files
+Environment Dependence
+Install required dependencies before running the skill:
+python -m pip install pytesseract opencv-python pandas openpyxl Pillow
+Chat Box Invocation Command
+Basic Usage
+Send the following command directly in the Claw chat box to invoke the skill:
+/fams-scan-pic2excel filePath="Your scan folder path"
+Advanced Custom Usage
+/fams-scan-pic2excel filePath="Your scan folder path" outputPath="Custom output Excel path" batchMode=true
+Skill Running Instructions
+1. Put all scanned pictures (jpg/png/bmp/tiff) into a single folder
+2. Use the chat box command to specify the folder path and run the skill
+3. The system will automatically check file validity, batch identify table structures, and export complete Excel files
